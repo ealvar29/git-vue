@@ -1,9 +1,17 @@
-<script setup lang="ts">
-import TheWelcome from '@/components/TheWelcome.vue'
+<script lang="ts">
+import { useCounterStore } from '@/stores/counter'
+
+export default {
+  setup() {
+    const counter = useCounterStore();
+    console.log(counter)
+  }
+}
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <p>Hello</p>
+    <p>{{ counter.counter }}</p>
   </main>
 </template>
